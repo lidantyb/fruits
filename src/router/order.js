@@ -1,0 +1,27 @@
+export default{
+  path:"/order",
+  name:"我的订单",
+  component:()=>import("../views/order.vue"),
+  children:[
+    {
+      path:"allorder",
+      name:"全部订单",
+      component:()=>import("../components/order/allorder.vue")
+    },
+    {
+      path:"payment",
+      name:"待付款",
+      component:()=>import("../components/order/payment.vue")
+    },
+    {
+      path:"received",
+      name:"待收货",
+      component:()=>import("../components/order/received.vue")
+    },
+    {
+      path:"finished",
+      name:"已完成",
+      component:()=>import("../components/order/finished.vue")
+    }
+  ]
+}
